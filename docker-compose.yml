@@ -1,0 +1,10 @@
+version: '3'
+services:
+  node:
+    image: node:12-alpine
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/mnt
+    working_dir: /mnt
+    command: yarn serve

@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your Vue.js App on Docker"/>
+    <div>{{ sample() }}</div>
   </div>
 </template>
 
@@ -12,6 +13,13 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods: {
+    sample() {
+      const greeting = "hello"
+      console.log(greeting)
+      return 'sample'
+    }
   }
 }
 </script>
